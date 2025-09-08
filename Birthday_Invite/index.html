@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Loree's Day</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <h2>The Loree's Day</h2>
+    <div id="question-container">
+      <div class="question" id="question">Loading question...</div>
+      <div id="buttons">
+        <button class="yes" id="yes-btn" onclick="answerYes()">Yes</button>
+        <button class="no" id="no-btn" onclick="answerNo()">No</button>
+      </div>
+
+      <div class="confirmation" id="confirmation" style="display:none;">
+        You really don't know and you are selecting "No"?
+        <br />
+        <button onclick="confirmNo(true)">I really don't know</button>
+        <button onclick="confirmNo(false)">I might know</button>
+      </div>
+
+      <div id="date-input-container" style="display:none;">
+        <label for="date-input">Please enter the date (MM/DD): </label>
+        <input type="text" id="date-input" placeholder="MM/DD" maxlength="5" />
+        <button id="submit-date-btn" onclick="submitDate()">Submit</button>
+      </div>
+
+      <div id="dare-question-container" style="display:none;">
+        <p>Do you dare to guess?</p>
+        <button class="yes" onclick="dareAnswer(true)">Yes</button>
+        <button class="no" onclick="dareAnswer(false)">No</button>
+      </div>
+
+      <div id="theme-input-container" style="display:none;">
+        <label for="theme-input">Enter your guess:</label><br />
+        <input type="text" id="theme-input" />
+        <button id="submit-theme-btn" onclick="submitTheme()">Submit</button>
+      </div>
+
+      <div id="feedback"></div>
+      <div id="no-message"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
